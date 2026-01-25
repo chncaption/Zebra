@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "axios": "^0.18.1",
@@ -15,12 +17,13 @@
     "highlight.js": "^9.12.0",
     "iview": "^2.8.0",
     "moment": "^2.20.1",
-    "npm": "^6.0.1",
+    "npm": "^7.21.0",
     "to": "^0.2.9",
     "update": "^0.7.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -69,5 +72,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "snyk": true
 }
